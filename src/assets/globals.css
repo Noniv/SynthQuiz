@@ -1,0 +1,9 @@
+body {
+    background-color: #262626;
+    display: block;
+}
+
+#app {
+    padding: 0;
+    max-width: none;
+}
