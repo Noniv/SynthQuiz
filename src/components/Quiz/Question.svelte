@@ -5,11 +5,14 @@
   let timeEnded = false;
   let timeStarted = false;
   let answer = "";
+  let requestedAudio = false;
   export let song;
 
   const dispatch = createEventDispatcher();
 
   const loadAudio = () => {
+    if (requestedAudio) return;
+    requestedAudio = true;
     let audio = new Audio(song.src);
     audio.addEventListener("loadeddata", () => {
       if (audio.readyState == 4) {
